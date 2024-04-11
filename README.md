@@ -1,44 +1,36 @@
-// Get the output screen element
-const outputScreen = document.getElementById('ouput-screen');
+# Project Name
 
-// Function to display values on the screen
-function display(value) {
-    outputScreen.value += value;
-}
+Brief description or tagline of the project.
 
-// Function to clear the screen
-function clearScreen() {
-    outputScreen.value = '';
-}
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/yourusername/repositoryname.svg)](https://github.com/yourusername/repositoryname/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/yourusername/repositoryname.svg)](https://github.com/yourusername/repositoryname/pulls)
 
-// Function to delete the last character from the screen
-function deleteCharacter() {
-    outputScreen.value = outputScreen.value.slice(0, -1);
-}
+## Table of Contents
 
-// Function to calculate the result
-function calculateResult() {
-    let result = '';
-    try {
-        result = eval(outputScreen.value); // Use eval to evaluate the arithmetic expression
-        outputScreen.value = result;
-    } catch (error) {
-        outputScreen.value = 'Error'; // Handle any errors in evaluation
-    }
-}
+- [About](#about)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-// Event listener for keyboard input
-document.addEventListener('keydown', (event) => {
-    const keyValue = event.key;
+## About
 
-    // Check for numeric keys, operators, and decimal point
-    if (/[0-9+\-*/.%]/.test(keyValue)) {
-        display(keyValue);
-    } else if (keyValue === 'Enter') {
-        calculateResult();
-    } else if (keyValue === 'Backspace') {
-        deleteCharacter();
-    } else if (keyValue === 'Escape') {
-        clearScreen();
-    }
-});
+Provide a more detailed description of the project. What problem does it solve? What technologies does it use?
+
+## Features
+
+List the key features and functionalities of the project.
+
+- Feature 1
+- Feature 2
+- ...
+
+## Installation
+
+Provide step-by-step instructions on how to install and set up the project locally.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/repositoryname.git
